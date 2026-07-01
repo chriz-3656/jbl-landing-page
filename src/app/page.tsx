@@ -4,6 +4,9 @@ import Experience from "@/components/Experience";
 import { motion, Variants } from "framer-motion";
 import { ArrowDown, Battery, Headphones, Speaker, Volume2, Shield, Settings, BatteryMedium, Plus, Star } from "lucide-react";
 import Image from "next/image";
+import { Syncopate } from "next/font/google";
+
+const syncopate = Syncopate({ subsets: ["latin"], weight: ["700"] });
 
 export default function Home() {
   const textVariant: Variants = {
@@ -29,9 +32,13 @@ export default function Home() {
       </a>
 
       {/* Cinematic Background Layer */}
-      <div className="fixed inset-0 w-full h-full pointer-events-none z-0">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,_rgba(80,80,90,0.4)_0%,_rgba(0,0,0,1)_60%)]" />
-        <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.8%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E')" }} />
+      <div className="fixed inset-0 w-full h-full pointer-events-none z-0 flex items-center justify-center overflow-hidden">
+        {/* Giant Graphite Background Text */}
+        <div className={`absolute text-[32vw] ${syncopate.className} text-graphite/80 select-none tracking-tighter leading-none z-0 translate-y-[-10%] drop-shadow-2xl`}>
+          JBL
+        </div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,_rgba(80,80,90,0.4)_0%,_rgba(0,0,0,1)_60%)] z-10" />
+        <div className="absolute inset-0 opacity-[0.04] z-20" style={{ backgroundImage: "url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.8%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E')" }} />
       </div>
 
       <Experience />
