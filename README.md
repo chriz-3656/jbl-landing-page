@@ -6,9 +6,7 @@ This is a premium, cinematic 3D landing page for the JBL Tune 720BT headphones, 
 
 Watch a recording of the live website below:
 
-<video src="./demo.mp4" controls="controls" width="100%" max-width="800px">
-  Your browser does not support the video tag.
-</video>
+https://github.com/chriz-3656/jbl-landing-page/raw/main/demo.mp4
 
 ## Features
 - **3D Hero Experience:** Interactive 3D model of the JBL Tune 720BT headphones.
