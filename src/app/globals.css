@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --color-pure-black: #000000;
+  --color-deep-charcoal: #111111;
+  --color-graphite: #1A1A1A;
+  --color-soft-white: #F3F4F6;
+  --color-warm-silver: #D1D5DB;
+  --color-metallic-gray: #9CA3AF;
+  --color-jbl-orange: #FF5A00;
+  
+  --font-sans: 'Inter', sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-pure-black text-soft-white font-sans overflow-x-hidden;
+    /* Hide scrollbar for a cleaner look */
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  body::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+
+  ::selection {
+    @apply bg-jbl-orange text-pure-black;
+  }
+}
+
+@layer utilities {
+  .glassmorphism {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.1)];
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-soft-white to-metallic-gray;
+  }
+  
+  .glow {
+    box-shadow: 0 0 20px rgba(255, 90, 0, 0.15);
+  }
+}
+
+/* Lenis recommended styles */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
