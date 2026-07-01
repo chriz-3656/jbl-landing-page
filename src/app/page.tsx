@@ -2,7 +2,7 @@
 
 import Experience from "@/components/Experience";
 import { motion, Variants } from "framer-motion";
-import { ArrowDown, Battery, Headphones, Speaker, Volume2, Shield, Settings, BatteryMedium, Plus, Star } from "lucide-react";
+import { ArrowDown, Battery, Headphones, Speaker, Volume2, Shield, Settings, BatteryMedium, Plus, Star, Github } from "lucide-react";
 import Image from "next/image";
 
 export default function Home() {
@@ -14,6 +14,17 @@ export default function Home() {
   return (
     <main className="main-container relative w-full bg-pure-black text-soft-white overflow-hidden">
       
+      {/* Floating Source Code Button */}
+      <a 
+        href="https://github.com/chriz-3656/jbl-landing-page" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="fixed top-6 right-6 md:top-10 md:right-12 z-50 flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10 hover:border-white/30 hover:scale-105 transition-all duration-300 shadow-lg text-sm font-semibold"
+      >
+        <Github size={18} />
+        <span className="hidden sm:inline">Source Code</span>
+      </a>
+
       {/* Cinematic Background Layer */}
       <div className="fixed inset-0 w-full h-full pointer-events-none z-0">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,_rgba(80,80,90,0.4)_0%,_rgba(0,0,0,1)_60%)]" />
