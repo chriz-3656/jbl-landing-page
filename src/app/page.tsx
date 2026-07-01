@@ -1,12 +1,12 @@
 "use client";
 
 import Experience from "@/components/Experience";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { ArrowDown, Battery, Headphones, Speaker, Volume2, Shield, Settings, BatteryMedium, Plus, Star } from "lucide-react";
 import Image from "next/image";
 
 export default function Home() {
-  const textVariant = {
+  const textVariant: Variants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" } },
   };
